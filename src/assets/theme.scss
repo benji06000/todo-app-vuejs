@@ -1,0 +1,93 @@
+:root {
+  /* Light mode (inspiré ChatGPT clair) */
+  --chat-bg: #fAfAfA;
+  --chat-surface: #f7f7f8;
+  --chat-text: #202123;
+  --chat-accent: #0da37f;
+  --chat-muted: #6b6b6e;
+  --chat-border: #dadce0;
+  --chat-input-bg: #fAfAfA;
+  --chat-input-text: #fAfAfA;
+}
+
+body.dark {
+  /* Dark mode (inspiré ChatGPT sombre) */
+  --chat-bg: #343541;
+  --chat-surface: #444654;
+  --chat-text: #ececf1;
+  --chat-accent: #10a37f;
+  --chat-muted: #888;
+  --chat-border: #555;
+  --chat-input-bg: #3e3f4b;
+  --chat-input-text: #ececf1;
+}
+
+/* --------------------------- */
+/*         BASE RESET          */
+/* --------------------------- */
+body {
+  background-color: var(--chat-bg);
+  color: var(--chat-text);
+}
+
+.card {
+  background-color: var(--chat-surface);
+  color: var(--chat-text);
+  border: none;
+}
+
+input,
+.form-control {
+  background-color: var(--chat-input-bg);
+  color: var(--chat-input-text);
+  border: none;
+}
+
+input::placeholder {
+  color: var(--chat-muted);
+}
+
+.list-group-item {
+  background-color: transparent;
+  color: var(--chat-text);
+  border: 1px solid var(--chat-border);
+}
+
+.btn-primary {
+  background-color: var(--chat-accent);
+  border: none;
+  color: var(--chat-input-text);
+}
+
+.btn-outline-danger {
+  border-color: #f44336;
+  color: #f44336;
+}
+
+.btn-outline-danger:hover {
+  background-color: #f44336;
+  color: var(--chat-text);
+}
+
+.btn-danger {
+  background-color: #d32f2f;
+  border: none;
+  color: var(--chat-input-text);
+}
+
+.text-muted {
+  color: var(--chat-muted) !important;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.card,
+input,
+.form-control,
+.list-group-item,
+.toast {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
